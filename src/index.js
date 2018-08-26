@@ -1,18 +1,11 @@
-import { BrowserRouter, NavLink, Route } from "react-router-dom";
-import React, { Fragment } from "react";
-import {
-  AppBar,
-  Card,
-  CardContent,
-  Grid,
-  List,
-  ListItem,
-  ListSubheader,
-  Toolbar,
-  Typography,
-  Button
-} from "@material-ui/core";
-import theme from "@material-ui/core/colors/indigo";
-import DevTools from "mobx-react-devtools";
+import React from "react";
+import ReactDOM from "react-dom";
+import { LearningApp } from "./common/LearningApp";
 
-export class MobXExampleApp extends React.Component {}
+ReactDOM.render(
+  <LearningApp
+    title="Learning MobX"
+    sourceCodeUrl="https://github.com/ckruszynsky/Mobx-Examples"
+  />,
+  document.getElementById("root")
+);
