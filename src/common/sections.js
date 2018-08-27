@@ -3,7 +3,11 @@ import {
   BoxObservableExample,
   ArrayObservableExample,
   MapObservableExample,
-  ComputedObservableExample
+  ComputedObservableExample,
+  BasicActionExample,
+  EnforceActionExample,
+  DecoratorActionExample,
+  AutorunReactionExample
 } from "../sections/section-01";
 
 export const sections = applyPathPrefix([
@@ -35,6 +39,26 @@ export const sections = applyPathPrefix([
         title: "Computed Observables",
         path: "/computed-observable",
         component: ComputedObservableExample
+      },
+      {
+        title: "Basic Actions",
+        path: "/basic-action",
+        component: BasicActionExample
+      },
+      {
+        title: "Enforce Actions",
+        path: "/enforce-action",
+        component: EnforceActionExample
+      },
+      {
+        title: "Decorator Actions",
+        path: "/decorators-action",
+        component: EnforceActionExample
+      },
+      {
+        title: "Autorun Reactions",
+        path: "/autorun-reaction",
+        component: AutorunReactionExample
       }
     ]
   }
