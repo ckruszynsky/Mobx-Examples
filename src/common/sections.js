@@ -7,7 +7,9 @@ import {
   BasicActionExample,
   EnforceActionExample,
   DecoratorActionExample,
-  AutorunReactionExample
+  AutorunReactionExample,
+  ReactionExample,
+  WhenReactionExample
 } from "../sections/section-01";
 
 export const sections = applyPathPrefix([
@@ -59,6 +61,16 @@ export const sections = applyPathPrefix([
         title: "Autorun Reactions",
         path: "/autorun-reaction",
         component: AutorunReactionExample
+      },
+      {
+        title: "Reaction Reaction",
+        path: "/reaction-reaction",
+        component: ReactionExample
+      },
+      {
+        title: "When Reaction",
+        path: "/when-reaction",
+        component: WhenReactionExample
       }
     ]
   }

@@ -12,3 +12,5 @@ export * from "./actions/decorator-action";
 
 //reactions
 export * from "./reactions/autorun-reaction";
+export * from "./reactions/reaction-reaction";
+export * from "./reactions/when-reaction";

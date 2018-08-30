@@ -1,6 +1,19 @@
 import { observable } from "mobx";
 import { asComponent } from "../../../common/as-component";
-
+import React from "react";
+import {
+  AppBar,
+  Card,
+  CardContent,
+  Grid,
+  List,
+  ListItem,
+  ListItemText,
+  ListSubheader,
+  Toolbar,
+  Typography,
+  Button
+} from "@material-ui/core";
 export const CreateObservableExample = asComponent(() => {
   //creating an observable item
   //changes to its properties will be tracked
@@ -22,12 +35,32 @@ export const CreateObservableExample = asComponent(() => {
   //retrieve the values
   console.log(`Buying ${item.quantity} of ${item.name}`);
 
+  return (
+    <div>
+      <Card>
+        <CardContent>
+          <Typography variant="headline">Notes</Typography>
+          <List>
+            <ListItem>
+              <ListItemText variant="body2">
+                observable objects only track the properties provided in the
+                inital value given to "observable"
+              </ListItemText>
+              <Typography variant="body2">
+                Any properties added after the observable is created will not be
+                tracked.
+              </Typography>
+            </ListItem>
+          </List>
+        </CardContent>
+      </Card>
+    </div>
+  );
+
   /*
     observable objects only track the properties provided in the 
     inital value given to "observable"
 
-    Any properties added after the observable is created will not be
-    tracked. 
 
     if you need dynamic tracking of properties, see observable maps instead.
 

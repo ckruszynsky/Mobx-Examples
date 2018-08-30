@@ -25,13 +25,26 @@ export const AutorunReactionExample = asComponent(() => {
   cart.addItem("Power Cable", 1);
   cart.addItem("Shoes", 1);
 
+  //cancel the autorun
   cart.cancelAutorun();
 
-  cart.addItem("Power Cable", 1);
-  cart.addItem("Shoes", 1);
+  cart.addItem("Power Cable-2", 1);
+  cart.addItem("Shoes-2", 1);
 
   // Prints:
   // Items in Cart: 0
   // Items in Cart: 1
   // Items in Cart: 2
 });
+
+/*
+Autorun - is a long running side effect 
+ The logging in our example occurs immediately and also any time 
+ the observable changes. 
+
+ To stop the autorun from running, we use the return value of autorun()
+ which is a function that is a disposer function. 
+
+ By calling the function, it will cancel the autorun side effect
+
+*/
