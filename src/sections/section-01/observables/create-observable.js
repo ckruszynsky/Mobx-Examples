@@ -42,30 +42,26 @@ export const CreateObservableExample = asComponent(() => {
           <Typography variant="headline">Notes</Typography>
           <List>
             <ListItem>
-              <ListItemText variant="body2">
+              <ListItemText>
                 observable objects only track the properties provided in the
                 inital value given to "observable"
               </ListItemText>
-              <Typography variant="body2">
+            </ListItem>
+            <ListItem>
+              <ListItemText>
                 Any properties added after the observable is created will not be
                 tracked.
-              </Typography>
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                observable objects only track the properties provided in the
+                inital value given to "observable"
+              </ListItemText>
             </ListItem>
           </List>
         </CardContent>
       </Card>
     </div>
   );
-
-  /*
-    observable objects only track the properties provided in the 
-    inital value given to "observable"
-
-
-    if you need dynamic tracking of properties, see observable maps instead.
-
-    observables only work with javaScript plain objects;
-    if you need to make an observable using a integer or primitive
-    type use observable.box
-  */
 });

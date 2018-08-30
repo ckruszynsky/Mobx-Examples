@@ -1,5 +1,19 @@
 import { observable, toJS } from "mobx";
+import React from "react";
 import { asComponent } from "../../../common/as-component";
+import {
+  AppBar,
+  Card,
+  CardContent,
+  Grid,
+  List,
+  ListItem,
+  ListItemText,
+  ListSubheader,
+  Toolbar,
+  Typography,
+  Button
+} from "@material-ui/core";
 
 export const ArrayObservableExample = asComponent(() => {
   const items = observable.array(); // Start with empty array
