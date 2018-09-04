@@ -12,6 +12,8 @@ import {
   WhenReactionExample
 } from "../sections/section-01";
 import BookSearchApp from "../sections/section-02";
+import { ObservableRefExample } from "../sections/section-03";
+
 export const sections = applyPathPrefix([
   {
     section: 1,
@@ -82,6 +84,17 @@ export const sections = applyPathPrefix([
         title: "Book Search",
         path: "/",
         component: BookSearchApp
+      }
+    ]
+  },
+  {
+    section: 3,
+    title: "Observable Tree",
+    examples: [
+      {
+        title: "Ref Observables",
+        path: "/observable-ref",
+        component: ObservableRefExample
       }
     ]
   }
