@@ -2,17 +2,12 @@ import { observable, toJS } from "mobx";
 import React from "react";
 import { asComponent } from "../../../common/as-component";
 import {
-  AppBar,
   Card,
   CardContent,
-  Grid,
   List,
   ListItem,
   ListItemText,
-  ListSubheader,
-  Toolbar,
-  Typography,
-  Button
+  Typography
 } from "@material-ui/core";
 
 export const ArrayObservableExample = asComponent(() => {
@@ -36,30 +31,44 @@ export const ArrayObservableExample = asComponent(() => {
   console.log(items);
   const plainArray = toJS(items);
   console.log(plainArray);
+
+  return (
+    <div>
+      <Card>
+        <CardContent>
+          <Typography variant="headline">Notes</Typography>
+          <List>
+            <ListItem>
+              <ListItemText>
+                <b>**IMPORTANT***</b>
+                <br />
+                obsevable array is not a real JS array, even though the API is
+                the same as a JS Array.
+                <br />
+                when passing this array to other libraries or APIs, convert it
+                into a JS Array by calling toJS()
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                Observable automatically converts an object, array, or a map
+                into an observable. <br /> For primitives and functions use :
+                observable.box
+              </ListItemText>
+            </ListItem>
+            <ListItem>
+              <ListItemText>
+                MobX uses deep observability when creating an observable.<br />
+                Which means MobX will automatically observe every property, at
+                every level, in the object tree. <br />
+                Observables will track the addition and removal of items to
+                arrays. <br />
+                You can override this behavior by using special decorators.
+              </ListItemText>
+            </ListItem>
+          </List>
+        </CardContent>
+      </Card>
+    </div>
+  );
 });
-
-/*
- **IMPORTANT***
- obsevable array is not a real JS array, even though the API
- is the same as a JS Array. 
-
- when passing this array to other libraries or APIs, convert it
- into a JS Array by calling toJS()
-**************************************
-
-  observable automatically converts an object,
-  array, or a map into an observable. 
-
-  for primitives and functions use : observable.box
-
-  MobX uses deep observability when creating an observable.
-  which means MobX will automatically observe every property, at 
-  every level, in the object tree.
-
-  In arrays and maps it will track removals and additions
-
-  There are some cases where you may want to limit this behavior
-  by using some of the special decorators. 
-
-
-*/

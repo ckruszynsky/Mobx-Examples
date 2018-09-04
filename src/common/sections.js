@@ -11,7 +11,7 @@ import {
   ReactionExample,
   WhenReactionExample
 } from "../sections/section-01";
-
+import BookSearchApp from "../sections/section-02";
 export const sections = applyPathPrefix([
   {
     section: 1,
@@ -71,6 +71,17 @@ export const sections = applyPathPrefix([
         title: "When Reaction",
         path: "/when-reaction",
         component: WhenReactionExample
+      }
+    ]
+  },
+  {
+    section: 2,
+    title: "React Mobx Example",
+    examples: [
+      {
+        title: "Book Search",
+        path: "/",
+        component: BookSearchApp
       }
     ]
   }

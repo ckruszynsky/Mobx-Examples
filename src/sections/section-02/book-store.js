@@ -1,10 +1,21 @@
 import { action, computed, observable, runInAction } from "mobx";
+import { searchBooks } from "./book-service";
 
 class BookSearchStore {
-  @observable term = "";
+  @observable term = "javascript";
   @observable status = "";
   @observable.shallow results = [];
+
   @observable totalCount = 0;
+
+  @computed
+  get isEmpty() {
+    return this.results.length === 0;
+  }
+
+  constructor() {
+    this.search();
+  }
 
   @action.bound
   setTerm(value) {
