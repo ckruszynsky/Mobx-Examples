@@ -12,7 +12,14 @@ import {
   WhenReactionExample
 } from "../sections/section-01";
 import BookSearchApp from "../sections/section-02";
-import { ObservableRefExample } from "../sections/section-03";
+import {
+  ObservableRefExample,
+  ObservableStructuralExample,
+  ObservableShallowExample,
+  ObservableExtendExample,
+  DecorateExample,
+  ObservableDecorateExample
+} from "../sections/section-03";
 
 export const sections = applyPathPrefix([
   {
@@ -92,9 +99,34 @@ export const sections = applyPathPrefix([
     title: "Observable Tree",
     examples: [
       {
-        title: "Ref Observables",
+        title: "Reference Only Observables",
         path: "/observable-ref",
         component: ObservableRefExample
+      },
+      {
+        title: "Structural Observables",
+        path: "/observable-struct",
+        component: ObservableStructuralExample
+      },
+      {
+        title: "Shallow Observables",
+        path: "/observable-shallow",
+        component: ObservableShallowExample
+      },
+      {
+        title: "Extend Observable",
+        path: "/observable-extend",
+        component: ObservableExtendExample
+      },
+      {
+        title: "Decorate",
+        path: "/decorate",
+        component: DecorateExample
+      },
+      {
+        title: "Observable Decorate",
+        path: "/observable-decorate",
+        component: ObservableDecorateExample
       }
     ]
   }
